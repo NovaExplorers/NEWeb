@@ -1,0 +1,109 @@
+
+
+.genWrapper {
+    background: var(--sparkling-purple);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    gap: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo * {
+    fill: white;
+}
+.logo svg {
+    width: 250px;
+}
+
+.titleBold, .titleNormal {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 50px;
+    letter-spacing: -0.105em;
+    text-transform: uppercase;
+}
+
+.titleBold { font-weight: 700; }
+
+.deviceList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 70px;
+}
+
+.device {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+}
+
+.deviceCircle {
+    width: 15vmax;
+    height: 15vmax;
+
+
+    background: var(--matte-gray);
+
+    border-radius: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.deviceCircle:hover {
+    transform: scale(1.1);
+}
+
+.drone {
+    height: 7vmax;
+}
+
+.deviceName {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.deviceInfo {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .deviceList {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .titleBold, .titleNormal{
+        font-size: 1.5rem;
+    }
+    .genWrapper { 
+        gap: 30px;
+    }
+}
