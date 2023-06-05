@@ -7,6 +7,8 @@
   --abyss-light-blue: #ECEEF3;
 }
 
+
+
 body, html, .root {
   
   margin: 0;
@@ -29,4 +31,33 @@ body, html, .root {
 
 .copyright {
   font-family: 'Epilogue', sans-serif;
+}
+
+.hiddenLoader { transition: opacity 200ms, display 200ms; opacity: 0; display: none; }
+
+.loader {
+
+  z-index: 1000;
+
+  opacity: 1;
+
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--matte-gray);
+
+  flex-direction: column;
+  overflow: hidden;
+
+}
+
+
+
+.droneLoader {
+  transform: scale(1.5);
 }

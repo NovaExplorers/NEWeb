@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { setLoggedIn, setUser } from '../state/user.state';
 import styles from '../styles/login.module.css';
+import { toggleLoader } from '../state/ui.state';
 
 
 export default function Login() {
@@ -23,6 +24,7 @@ export default function Login() {
     const login = async () => {
         if(!usernameForm || !passwordForm) return setErrorMessage('Please enter a username/password.');
 
+        dispatch(toggleLoader())
 
         const req = await axios({
             url: 'http://localhost:8080/api/v1/auth',
@@ -39,14 +41,16 @@ export default function Login() {
         });
 
         if(req.status == 401) {
-            console.log('logged');
+            dispatch(toggleLoader())
             setErrorMessage('Incorrect username/password')
         }
 
         if(req.status == 200 && req.data.success) {
             dispatch(setLoggedIn(true));
             dispatch(setUser(req.data.user))
-            navigate('/choose')
+            setTimeout(() => {
+                navigate('/choose')
+            }, 100);
         }
 
     }

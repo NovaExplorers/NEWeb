@@ -9,6 +9,7 @@ import axios from 'axios';
 import styles from '../styles/choose.module.css';
 import { useDispatch } from 'react-redux';
 import { setObj } from '../state/device.state';
+import { setLoader, toggleLoader } from '../state/ui.state';
 
 export default function Choose() {
 
@@ -32,16 +33,21 @@ export default function Choose() {
         });
 
         setDevices(req.data.data);
+        dispatch(setLoader(false))
     }
 
     const selectDevice = e => {
+        dispatch(setLoader(true))
         dispatch(setObj(e));
+        setTimeout(() => {
+            navigate('/dashboard')
+        }, 100);
     }
 
     return (
         <div className={styles.genWrapper}>
             <div className={styles.header}>
-                <ReactSVG src={"./src/assets/svg/logo.svg"} className={styles.logo} />
+                <ReactSVG src={"./src/assets/svg/logo.svg"} className={styles.logo} onClick={() => dispatch(toggleLoader())} />
                 <p className={styles.titleBold}>WELCOME</p>
                 <p className={styles.titleNormal}>PLEASE CHOOSE A DEVICE</p>
             </div>
@@ -52,7 +58,7 @@ export default function Choose() {
                             <img src="./src/assets/svg/drone.svg" className={styles.drone} />
                         </div>
                         <p className={styles.deviceName}>{e.name}</p>
-                        <p className={styles.deviceInfo}>{e.hostname}:{e.port}</p>
+                        <p className={styles.deviceInfo}>Connection Info <br/> {e.hostname}:{e.port}</p>
                     </div>
                 ))} 
                 

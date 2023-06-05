@@ -60,6 +60,8 @@
 
     font-family: 'Epilogue', sans-serif;
     color: white;
+
+    gap: 10px;
 }
 
 .deviceCircle {
@@ -88,7 +90,7 @@
 
 .deviceName {
     margin-top: 20px;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 .deviceInfo {

@@ -1,0 +1,28 @@
+.batteryPercentage {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    width: 33%;
+    background: var(--sparkling-purple);
+
+    border-radius: 12px;
+}
+
+.batteryPercentageWrapper {
+    margin-left: 30px;
+    margin-top: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.batteryPercentageGraph {
+    margin-left: -20px;
+    margin-top: auto;
+}
+.batteryPercentageGraph text, .batteryPercentageGraph .recharts-cartesian-axis-line {
+    fill: white !important;
+    font-family: 'Epilogue', sans-serif;
+}
