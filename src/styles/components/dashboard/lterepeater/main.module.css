@@ -1,0 +1,48 @@
+.title { color: var(--sparkling-purple); }
+.titleContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+
+    
+}
+
+.statusContainer {
+    width: 100%;
+    height: 40px;
+    background: var(--matte-gray);
+
+    border-radius: 12px;
+}
+.statusContainerWrapper {
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.statusLabel {
+    font-weight: 600;
+}
+
+.statusValue {
+    float: right;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.lteRepeaterInfo * {
+    color: #000;
+    text-align: center;
+}

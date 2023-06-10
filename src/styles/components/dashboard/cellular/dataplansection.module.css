@@ -1,0 +1,51 @@
+.dataPlanSection {
+    width: 35%;
+    height: 100%;
+
+    background: var(--sparkling-purple);
+}
+.dataPlanWrapper {
+    display: flex;
+    justify-content: center;
+
+    height: 100%;
+
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 40px;
+}
+
+.smallTitle {
+    padding-bottom: 2px;
+
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: -0.105em;
+    color: #fff;
+
+    text-align: center;
+}
+
+
+.dataPlanWrapper > * {
+    gap: 7px;
+}
+
+.dataInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+.availableData {
+    float: right;
+    text-align: right;
+}
+
+.totalUsage, .currentPlan {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

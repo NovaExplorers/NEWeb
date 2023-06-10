@@ -1,26 +1,17 @@
-import styles from '../../../styles/dashboard.module.css'
+import glStyles from '../../../styles/dashboard.module.css';
+import styles from '../../../styles/components/dashboard/cellular/main.module.css';
+import SignalSection from './signalSection';
+import DataPlanSection from './dataPlanSection';
+import DataConsumptionSection from './dataConsumptionSection';
 
-export default function Cellular(props) {
+export default function Cellular({ data }) {
     return (
-        <div className={styles.cellular}>
-            <p className={styles.sectionTitle}>Cellular</p>
-            <div className={styles.sectionHorizontalItems}>
-               <div className={styles.cellularSections}>
-                    <div className={styles.signalSection}>
-                        <div className="signalInfo">
-                            <p className="subHeadKey">Signal strength</p>
-                            <p className="subHeadValue"></p>
-                        </div>
-                        <div className="signalInfo">
-                            <p className="subHeadKey">Connectivity</p>
-                            <p className="subHeadValue"></p>
-                        </div>
-                        <div className="signalInfo">
-                            <p className="subHeadKey">Carrier</p>
-                            <p className="subHeadValue"></p>
-                        </div>
-                    </div>
-               </div>
+        <div className={glStyles.cellular}>
+            <p className={glStyles.sectionTitle}>Cellular</p>
+            <div className={styles.cellularSections + ' ' + glStyles.sectionHorizontalItems}>
+                <SignalSection data={data} />
+                <DataPlanSection data={data} />
+                <DataConsumptionSection data={data} />
             </div>
         </div>
     )

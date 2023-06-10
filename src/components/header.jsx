@@ -13,7 +13,7 @@ export default function Header() {
                     <p className={styles.headerItem}>Main View</p>
                     <p className={styles.headerItem}>Battery</p>
                     <p className={styles.headerItem}>Cellular</p>
-                    <p className={styles.headerItem}>GSM Repeater</p>
+                    <p className={styles.headerItem}>LTE Repeater</p>
                     <p className={styles.headerItem}>Drone</p>
                     <p className={styles.headerItem}>VPN</p>
                 </div>

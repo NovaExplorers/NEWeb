@@ -1,0 +1,8 @@
+.droneMapContainer {
+    width: 40%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 12px;
+
+    overflow: hidden;
+}

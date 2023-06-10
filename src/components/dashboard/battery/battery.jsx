@@ -3,14 +3,14 @@ import Percentage from './percentage';
 import Vertical from './vertical';
 import ANV from './anv';
 
-export default function Battery(props) {
+export default function Battery({ data }) {
     return (
         <div className={styles.battery}>
         <p className={styles.sectionTitle}>Battery</p>
         <div className={styles.sectionHorizontalItems}>
-            <Percentage data={props.data} />
-            <Vertical data={props.data} />
-            <ANV data={props.data} />
+            <Percentage data={data} />
+            <Vertical data={data} />
+            <ANV data={data} />
         </div>
         </div>
     )

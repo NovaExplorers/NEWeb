@@ -1,0 +1,106 @@
+.internetWrapper {
+    display: flex;
+    justify-content: baseline;
+
+    height: 100%;
+
+    flex-direction: column;
+    gap: 30px;
+
+    padding: 40px;
+}
+
+.internetWrapper * {
+    color: white;
+}
+
+.connections {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.wifi,
+.ethernet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--abyss-light-blue);
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.connectionTitle {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 22px;
+}
+
+.connectionInfo {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 16px;
+    text-align: center;
+}
+
+.wifi {
+    margin-left: auto;
+}
+
+.connectStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.connectStatsRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row;
+    height: 4vh;
+    width: 100%;
+    gap: 10px;
+}
+
+.stat {
+    width: 100%;
+    height: 100%;
+
+    background: var(--matte-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 30px;
+
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.downloadStat {
+    width: 150% !important;
+}
+
+.statName {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.statValue {
+    font-size: 1.5rem;
+}

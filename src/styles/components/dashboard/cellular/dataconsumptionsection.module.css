@@ -1,0 +1,25 @@
+.dataConsumptionSection {
+    width: 35%;
+    height: 100%;
+    
+    background: var(--sky-gray);
+    border-radius: 0px 12px 12px 0px;
+}
+
+.dataConsumptionSection * {
+    text-align: right;
+    color: black !important;
+}
+
+.dataConsumptionWrapper {
+    display: flex;
+    justify-content: baseline;
+    
+    height: 100%;
+
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 40px;
+}
+

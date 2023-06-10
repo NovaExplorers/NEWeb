@@ -8,6 +8,9 @@ import { setLoader } from '../state/ui.state';
 import Header from '../components/header'
 import Battery from '../components/dashboard/battery/battery';
 import Cellular from '../components/dashboard/cellular/cellular';
+import LTERepeater from '../components/dashboard/lterepeater/lterepeater';
+import InternetConnection from '../components/dashboard/internet/internet';
+import Drone from '../components/dashboard/drone/drone';
 
 
 
@@ -34,9 +37,11 @@ export default function Dashboard() {
                 <Cellular data={data} />
             </div>
             <div className={styles.col}>
-                <div className={styles.gsmRepeater}></div>
-                <div className={styles.internet}></div>
-                <div className={styles.drone}></div>
+                <LTERepeater data={data} />
+                <div className={styles.separator}></div>
+                <InternetConnection data={data} />
+                <div className={styles.separator}></div>
+                <Drone data={data} />
             </div>
         </div>
     </div>

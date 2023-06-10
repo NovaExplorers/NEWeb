@@ -16,14 +16,18 @@
     "@react-spring/web": "^9.7.2",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "lottie-react": "^2.4.0",
+    "pretty-ms": "^8.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-redux": "^8.0.7",
     "react-router-dom": "^6.11.2",
     "react-svg": "^16.1.15",
+    "react-tooltip": "^5.13.1",
     "recharts": "^2.6.2"
   },
   "devDependencies": {

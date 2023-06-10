@@ -26,15 +26,17 @@ const initialState = {
             mah: 3000,
         },
         voltage: {
-            volts: NaN,
+            volts: 19.2,
             data: [
-                { time: 1685976031, data: NaN }
+                { time: 1685976031, data: 12.9 },
+                { time: 1685976053, data: 20.3}
             ] 
         },
         amperage: {
-            amps: NaN,
+            amps: 4,
             data: [
-                { time: 1685976031, data: NaN }
+                { time: 1685976033, data: 2 },
+                { time: 1685976031, data: 5 },
             ] 
         }
     },
@@ -53,31 +55,25 @@ const initialState = {
         },
         dataPlan: {
             currentPlan: 'Forfait Liberté 99 DHS',
-            carrier: 'Itttisalat-Al Maghrib',
-            used: NaN,
-            available: NaN,
-            percentage: NaN,
+            carrier: 'Ittisalat-Al Maghrib',
+            used: 3,
+            available: 10,
+            percentage: 30,
         },
         dataConsumption: {
-            sessionTime: NaN,
-            consumedDataSession: NaN,
-            consumedDataSessionData: [
-                { time: 1685976031, data: NaN }
-            ]
+            sessionTime: 600000,
+            consumedDataSession: 2.459
         }
     },
-    gsmRepeater: {
+    lteRepeater: {
         /*
             Status
                 0 -> Inactive
                 1 -> Active
         */ 
         status: 0,
-        signalStrength: NaN,
-        signalStrengthData: [
-            { time: 1685976031, data: 'GSM' }
-        ],
-        transmittingStrengthMW: NaN
+        signalStrength: 200,
+        transmittingStrengthMW: 10
     },
     internet: {
         ethernetStatus: 0,
@@ -87,27 +83,24 @@ const initialState = {
         },
         downloadSpeed: {
             time: 1685976031,
-            value: NaN
+            value: 12
         },
         uploadSpeed: {
             time: 1685976031,
-            value: NaN
+            value: 2
         },
-        ping: NaN
+        ping: 105
     },
     drone: {
-        model: 'No model set',
-        modelImage: 'https://fastly.picsum.photos/id/1052/200/200.jpg',
+        model: 'dji Matrice 300 RTK',
+        modelImage: 'https://dji-official-fe.djicdn.com/cms/uploads/b69ea2fb26bb9391c6f5600608d4f5d6.png',
         battery: {
-            percentage: NaN, 
-            data: [
-                { time: 1685976031, data: NaN }
-            ],
+            percentage: 27, 
         },
-        altitude: NaN,
-        pressure: NaN,
+        altitude: 200,
+        pressure: 1089,
         // geoCords: ['lat', 'long']
-        geoCords: [NaN, NaN]
+        geoCords: [35.7517268, -5.9104553]
     }
 }
 
@@ -117,6 +110,9 @@ export const dataSlice = createSlice({
     reducers: {
         setValue: (state, action) => {
             _.set(state, action.payload.key, action.payload.value);
+            if(['cellular.dataPlan.used', 'cellular.dataPlan.available'].includes(action.payload.key)) {
+                state.cellular.dataPlan.percentage = state.cellular.dataPlan.used * 100 / state.cellular.dataPlan.available;
+            }
         }
     }
 });

@@ -1,0 +1,142 @@
+.mainDrone {
+    height: 100%;
+    width: 60%;
+    background: var(--matte-gray);
+
+    border-radius: 12px;
+}
+
+.mainDroneWrapper {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 25px;
+}
+
+.mainDroneWrapper > p {
+    color: white;
+}
+
+.mainDroneColumns {
+    width: 100%;
+    height: 110%;
+
+    display: flex;
+
+    flex-direction: row;
+    gap: 20px;
+}
+
+.droneModel {
+    width: 50%;
+    height: 100%;
+
+    background: var(--abyss-light-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.droneModel * {
+    color: var(--matte-gray);
+}
+
+.droneModelImage {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.mainDroneCol {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.droneBatteryContainer {
+    height: 40%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.droneBatteryMain {
+    width: 94%;
+    height: 100%;
+
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.droneBatteryAbstract {
+    width: 4%;
+    height: 50%;
+
+    border-radius: 100px;
+    background: var(--sky-gray);
+
+    float: right;
+    margin-left: auto;
+}
+
+.droneBatteryWrapper {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 25px;
+
+}
+
+.droneBatteryMain * {
+    color: var(--matte-gray);
+    z-index: 10;
+}
+
+.droneBatteryPercRepresentation {
+    z-index:5;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+    background: var(--sky-gray);
+}
+
+.sensorDataWrapper {
+    display: flex;
+
+
+    flex-direction: column;
+
+    padding: 20px;
+}
+
+.sensorDataContainer {
+    height: 60%;
+    width: 100%;
+
+    background: var(--sparkling-purple);
+
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 16%, 81% 0);
+}
+
+.pressure {
+    text-align: right;
+    margin-left: auto;
+}
