@@ -42,16 +42,10 @@ const initialState = {
     },
     cellular: {
         signal: {
-            percentage: 85,
-            data: [
-                { time: 1685976031, data: NaN }
-            ] 
+            percentage: 85
         },
         connectivity: {
-            generation: 'LTE',
-            data: [
-                { time: 1685976031, data: 'GSM' }
-            ] 
+            generation: 'LTE'
         },
         dataPlan: {
             currentPlan: 'Forfait Liberté 99 DHS',
@@ -76,10 +70,12 @@ const initialState = {
         transmittingStrengthMW: 10
     },
     internet: {
-        ethernetStatus: 0,
+        ethernet: {
+            connectedClients: []
+        },
         wifi: {
             status: 0,
-            connectedClients: 1
+            connectedClients: []
         },
         downloadSpeed: {
             time: 1685976031,
